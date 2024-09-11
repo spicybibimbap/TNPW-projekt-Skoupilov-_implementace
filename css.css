@@ -1,0 +1,888 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+    background-color: #cfc5b8;
+    color: #726350;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.5);
+}
+
+nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    display: inline-block; /* Položky vedle sebe */
+    margin-right: 20px;    /* Mezera mezi položkami */
+}
+
+nav .menu a {
+    text-decoration: none;
+    font-family: 'Lora', sans-serif;
+    color: #726350b6;
+    font-size: 25px;
+    transition: border-bottom 0.3s ease; /* Plynulý přechod podtrhující čáry */
+    border-bottom: 2px solid transparent; /* Původně transparentní podtrhující čára */
+}
+
+nav .menu a:hover {
+    border-bottom: 1px solid #726350a2; /* Tenká podtrhující čára při najetí myši */
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Lora', sans-serif;
+    color: #726350b6;
+    font-size: 30px;
+    margin: 20px 5px 20px 5px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid transparent; /* Původně transparentní podtrhující čára */
+    transition: border-bottom 1s ease; /* Plynulý přechod podtrhující čáry */
+}
+nav .logo {
+    font-size: 50px;
+    align-items: left;
+    position: relative;
+}
+
+nav .logo::before {
+    content: "Kliknutím se dostanete na úvodní stránku";
+   font-family: 'Lora', sans-serif;
+    font-size: 12px; /* Změněný font size pro menší tooltip */
+    font-style: italic;
+    position: absolute;
+    top: 90%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c0bab2;
+    color: #272625;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+
+nav .logo:hover::before {
+    opacity: 0.7;
+    visibility: visible;
+}
+
+nav .menu a.order-btn {
+    background-color: #95897a8b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #75634D;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+nav .menu a.order-btn:hover {
+    background-color: #272625;
+    color: #BFB2A0;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #726350; /* Tenká podtrhující čára při najetí myši */
+}
+
+nav #objednat-container {
+    position: relative;
+}
+
+footer {
+   font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    background-color: #c4b39cd0;
+    color: #5a5753af;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+footer .left-column {
+    text-align: left;
+    padding-left: 2%;
+    order: 3;
+}
+
+footer .center-column {
+    flex: 2;
+    text-align: center;
+    color: #726350;
+    order: 1;
+}
+
+footer .right-column {
+    text-align: right;
+    padding-right: 3%;
+    order: 5;
+}
+
+footer .copyright {
+    font-size: 18px;
+    order: 4;
+}
+
+footer .update-date {
+    font-size: 18px;
+    order: 2;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 60;
+    text-align: left;
+    margin-left: 8%;
+    color: #bfb2a0b0;
+   font-family: 'Lora', sans-serif;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 80;
+    text-align: center;
+    margin-left: 4%;
+    color: #bfb2a0b0;
+   font-family: 'Lora', sans-serif;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.content {
+    margin-top: 20px;
+    text-align: justify;
+    padding: 3vw; /* Využití viewport width pro padding */
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.content p {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    font-size: 20px; /* Využití viewport width pro velikost písma */
+    font-weight: light;
+}
+
+/* Nově přidané pravidlo pro zmenšování textu */
+@media screen and (max-width: 1200px) {
+    .content p {
+        font-size: 1.8vw; /* Zmenšení velikosti písma na větších obrazovkách */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content p {
+        font-size: 16px; /* Nastavení pevné velikosti písma na menších obrazovkách */
+    }
+}
+
+
+
+
+.column {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    padding: 7px;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Cenik*/
+.Cenik-column {
+    flex-basis: calc(50% - 20px);
+    text-align: left;
+}
+
+.Cenik-column table {
+    width: 85%;
+    margin-top: 10%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Kulaté rohy */
+    overflow: hidden;/* Skryje část kulatých rohů, které by mohly vyčuhovat */
+}
+
+.Cenik-column th, .Cenik-column td {
+    padding:7px;
+    border: 1px solid #83797442;
+    color: #726350c5;
+    font-family: 'Lora', sans-serif; /* Společný font pro všechny buňky */
+    text-align: center;
+}
+
+.Cenik-column td {
+    background-color: #cfc5b85b;
+} 
+
+.Cenik-column th {
+    background-color: #c2bab0; /* Barva prvního řádku */
+    color: #726350;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.Cenik-column h2 {
+    background-color: #cfc5b8; 
+    color: #705e54;
+    font-family: 'Lora', sans-serif;
+    font-size: 600;
+    font-weight: 400;
+    padding: 2% 55% 2% 5%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
+
+    nav .logo,
+    nav .menu,
+    nav .menu li {
+        width: 100%;
+        margin-bottom: 0px; /* Odsazení mezi jednotlivými prvky na mobilních zařízeních */
+    }
+
+    nav .menu li {
+        margin-right: 0;
+    }
+
+    nav .menu a,
+    nav .logo a {
+        margin-top: 5px;
+        font-size: 16px; 
+    }
+
+    nav .menu a.order-btn {
+        font-size: 16px;
+        padding: 10px 20px; 
+    }
+    
+.Cenik-column {
+        flex-basis: 100%;
+    }
+}
+
+/* KDO JSME */
+.Kdo-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; 
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.Kdo-column {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    padding: 20px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Kdo-column img {
+    width: 75%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+
+.Kdo-column p {
+    text-align: left;
+    line-height: 1.75;
+    font-size: 20px;
+    font-weight: light;
+    margin-bottom: 10px;
+}
+
+.Kdo-column h2 {  
+    font-size: 18px;
+    background-color: #cfc5b8; 
+    color: #705e54;
+    font-family: 'Lora', sans-serif;
+    font-size: larger;
+    font-weight: 550;
+    padding: 10px 90px 10px 90px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.Kdo-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px; /* Odsazení seznamu */
+}
+
+.Kdo-column li {
+    text-align: left;
+    padding: 0px 30px 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.25;
+    font-size: 18px;
+    font-weight: light;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.Kdo-column li::before {
+    content: '\2022'; /* Kód pro kruhovou odrážku */
+    color: #cfc5b8; /* Barva odrážky */
+    font-size: 24px;
+    position: absolute;
+    left: -20px; /* Vzdálenost odrážky od textu */
+}
+
+
+
+
+
+/* Styly pro fotogalerii */
+#gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+/* Objednat */
+.Objednat-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.Objednat-column {
+    flex-basis: 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    padding: 20px;
+    padding-bottom: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px; 
+}
+
+.Objednat-column label {
+    margin-top: 10px;
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    color: #705e54b4;
+}
+
+.Objednat-column input,
+.Objednat-column select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-color: #BFB2A0;
+    border-width: 0.5px;
+    border-radius: 5px;
+}
+
+.Objednat-column button {
+    background-color: #C1B19E;
+    color: #705e54cb;
+    font-family: 'Lora', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.Objednat-column button:hover {
+    background-color: #726350;
+    color: #BFB2A0;
+    font-family: 'Lora', sans-serif;
+}
+
+.Objednat-column select {
+    width: 70%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-family: 'Lora', sans-serif;
+    font-size: 16px;
+    color: #705e54;
+}
+
+.Objednat-column p {
+    text-align: right;
+    font-style: italic;
+    line-height: 1.5;
+    width: 90%;
+    padding: 2%;
+    margin-top: 5px;
+    margin-top: 10%;
+    box-sizing: border-box;
+    font-family: 'Lora', sans-serif;
+    font-size: 25px;
+    color: #705e54a9;
+}
+
+.formlogo {
+    margin-top: 10px;
+    margin-bottom: 9.5%;
+    text-align: right;
+}
+
+/* Reference */
+
+.Reference-column {
+    flex-basis: calc(20% - 20px);
+    box-sizing: border-box;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    padding: 5px;
+    padding-bottom: 3%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Přidáno pro oddělení sloupců */
+}
+
+.Reference-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+/* Přidáno pro vytvoření dvou řádků po třech sloupcích */
+@media (max-width: 992px) {
+    .Reference-column {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .Reference-column {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
+
+.Reference-column p {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    line-height: 1.5;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 18px;
+    font-weight: light;
+    margin-bottom: 3px;
+    margin-top: 0.5px;
+}
+
+.Reference-column h2 {
+ 
+color: #705e54d5;
+font-family: 'Lora', sans-serif;
+font-size: 600;
+font-weight: 400;
+padding: 2% 90% 2% 5%; 
+border-radius: 5px;
+margin-bottom: 10px;
+text-align: left; /* Přidáno pro zarovnání textu doleva */
+}
+
+.Reference-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -25%; /* Odsazení seznamu */
+}
+
+.Reference-column li {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: light;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.Reference-column li::before {
+    content: '\2022'; /* Kód pro kruhovou odrážku */
+    color: #cfc5b8; /* Barva odrážky */
+    font-size: 24px;
+    position: absolute;
+    left: -20px; /* Vzdálenost odrážky od textu */
+}
+
+
+
+.Reference-column {
+    flex-basis: calc(33.33% - 20px);
+}
+
+
+.jmeno {
+    color: #705e54;
+    font-style: oblique;
+    font-weight: bold;
+    padding-top: 5%;
+} 
+
+/* Sluzby */
+
+.Sluzby-column a:link {
+    color: #705e54;
+    background-color: #9b856c38;
+    border-radius: 3px;
+    padding: 1px 3px 1px 3px;
+}   
+
+.column a:visited {
+color: #9b856c;
+background-color: #FAFAF5;
+}
+
+.Sluzby-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.Sluzby-column {
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    padding: 10px;
+    padding-bottom: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Sluzby-column p {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 18px;
+    font-weight: light;
+    margin-bottom: 10px;
+}
+
+.Sluzby-column h2 {
+    background-color: #cfc5b8; 
+    color: #705e54;
+    font-family: 'Lora', sans-serif;
+    font-size: 600;
+    font-weight: 400;
+    padding: 2% 55% 2% 5%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.Sluzby-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%; /* Šířka odrážek vzhledem k šířce sloupce */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Sluzby-column li {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    width: 150%; /* Šířka odrážek vzhledem k rodiči (column ul) */
+}
+
+.Sluzby-column li::before {
+    content: '\2022'; /* Kód pro kruhovou odrážku */
+    color: #cfc5b8; /* Barva odrážky */
+    font-size: 24px;
+    position: absolute;
+    left: -20px; /* Vzdálenost odrážky od textu */
+}
+
+.obrazky {
+display: flex;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 15%;
+}
+
+.obrazky div {
+width: 18%; 
+overflow: hidden;
+border-radius: 10px;
+transition: transform 0.2s;
+margin-right: 2%; 
+}
+
+.obrazky div:last-child {
+margin-right: 0; 
+}
+
+.obrazky img {
+width: 100%;
+height: 100%;
+object-fit: cover; 
+border-radius: 10px;
+}
+
+.obrazky div:hover {
+transform: scale(1.2);
+}
+
+.obrazky img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+transition: transform 0.2s; /* Přidání animace na zvětšení */
+}
+
+.obrazky img:hover {
+transform: scale(1.2);
+}
+
+
+ /* Styly pro fotogalerii */
+ #gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.gallery-btn {
+font-size: 36px;
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+color: #fff;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 10px;
+border-radius: 50%;
+user-select: none;
+}
+
+.next-btn {
+right: 10px;
+}
+
+.prev-btn {
+left: 10px;
+}
+
+/* Aktualizovaný styl pro mobilní zařízení */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav .logo {
+        order: -1;
+        width: 100%; /* Logo na celou šířku */
+        text-align: center; /* Zarovnání loga na střed na mobilních zařízeních */
+    }
+
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Menu na celou šířku */
+    }
+
+    nav .menu li {
+        margin-right: 0; /* Žádný odstup mezi položkami na mobilních zařízeních */
+    }
+
+    nav .menu a.order-btn {
+        background-color: #C1B19E;
+        padding: 5px 5px;
+        border-radius: 5px;
+        color: #75634D;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px; /* Odsazení tlačítka objednat na mobilních zařízeních */
+    }
+
+    nav .menu a.order-btn:hover {
+        background-color: #272625;
+        color: #BFB2A0;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer .left-column,
+    footer .center-column,
+    footer .right-column,
+    footer .copyright,
+    footer .update-date {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .columns {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .Cenik-column,
+    .Kdo-column,
+    .Objednat-column,
+    .Reference-column,
+    .Sluzby-column {
+        flex-basis: 100%;
+    }
+
+    .obrazky {
+        flex-direction: column;
+    }
+
+    .obrazky div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Agentura Verbista</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a style="font-size: 53px; display: inline-block; vertical-align: middle;" href="Index.html"> Agentura Verbista</a>
+        <iconify-icon icon="game-icons:conversation" style="color: #705e54ad; font-size: 70px"></iconify-icon>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="KdoJsme.html">Kdo jsme</a></li>
+            <li><a href="Sluzby.html">Služby</a></li>
+            <li><a href="Cenik.html">Ceník</a></li>
+            <li><a href="Reference.html">Reference</a></li>
+            <li><a class="order-btn" href="Objednat.html">Objednat</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h1>Objednávka</h1>
+
+<form id="contact-form">
+    <div class="Objednat-columns">
+        <div class="Objednat-column" style="flex-basis: 66%;">
+            <label for="fname">Jméno:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Příjmení:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Adresa:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="note">Poznámka:</label>
+            <input style="padding: 80px;" type="note" id="note" name="note" required>
+        </div>
+        <div class="Objednat-column" style="flex-basis: 33%;">
+            <label for="service">Zvolená služba:</label>
+            <select id="service" name="service">
+                <option value="service1">Překládání</option>
+                <option value="service2">Tlumočení</option>
+            </select>
+
+            <label for="language">Zvolený jazyk:</label>
+            <select id="language" name="language">
+                <option value="en">angličtina</option>
+                <option value="de">němčina</option>
+                <option value="fr">francouzština</option>
+                <option value="it">italština</option>
+                <option value="es">španělština</option>
+                <option value="ru">ruština</option>
+                <option value="da">dánština</option>
+                <option value="sv">švédština</option>
+                <option value="no">norština</option>
+                <option value="fi">finština</option>
+                <option value="ar">arabština</option>
+                <option value="he">hebrejština</option>
+                <option value="ja">japonština</option>
+                <option value="zh">čínština</option>
+                <option value="hi">hindština</option>
+            </select>
+
+            <button type="submit">Odeslat</button>
+            <p>
+                "Děkujeme za váš zájem o naše služby. <br>Jsme připraveni vám pomoci a těšíme se na případnou spolupráci."
+            </p>
+
+            <p class="formlogo">
+                <iconify-icon icon="game-icons:conversation" style="color: #705e5488; font-size: 70px"></iconify-icon>
+                Agentura Verbista
+            </p>
+        </div>
+    </div>
+</form>
+
+<footer>
+    <div class="center-column">
+        <div style="color: #726350;">Agentura Verbista</div>
+        <div style="font-size: 18px;" class="update-date">Datum poslední aktualizace: 27.11.2023</div>
+    </div>
+    <div class="left-column">Email: veronika.skoupilova@uhk.cz</div>
+    <div class="right-column">
+        <div class="copyright">© Agentura Verbista</div>
+    </div>
+</footer>
+
+</body>
+</html>

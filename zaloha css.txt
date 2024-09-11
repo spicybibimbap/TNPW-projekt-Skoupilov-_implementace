@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #DDD6CD;
+    color: #726350;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.5);
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #726350;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav #objednat-container {
+    position: relative;
+}
+
+footer {
+    font-family: 'Kaisei Decol', sans-serif;
+    font-size: 24px;
+    background-color: #B0A494;
+    color: #FAFAF5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.5);
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 10%;
+    color: #BFB2A0;
+    font-family: 'Kaisei Decol', sans-serif;
+}
+
+.content {
+    margin-top: 20px;
+    text-align: justify;
+    padding: 30px;
+    background-color: #FAFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(39, 38, 37, 0.3);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content p {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    font-size: 30px;
+    font-weight: light;
+}
